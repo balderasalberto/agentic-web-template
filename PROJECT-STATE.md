@@ -5,7 +5,7 @@
 ```yaml
 project: agentic-web-template
 version: 2.0
-phase: foundation
+phase: interactive-demo-discovery
 status: in-progress
 ```
 
@@ -19,32 +19,64 @@ Construir y validar un template GitHub agnóstico para desarrollo agentico de ap
 - SPEC v2.0 incorporada.
 - AGENTS.md incorporado.
 - PROJECT-POLICY.md incorporado.
+- Contrato del Project Assistant incorporado.
+- Skill del Project Assistant incorporada.
+- Agent del Project Assistant incorporado.
+- Research Agent incorporado.
+- Flujo conversacional piloto iniciado con Eventos Sociales.
 
-## En construcción
+## Validación piloto — Eventos Sociales
 
-- Project Assistant.
-- Skills iniciales.
-- Agents especializados.
-- Harness mínimo.
-- Playbooks.
-- Tests/Evals del template.
-- Demo de validación.
+```yaml
+project_type: greenfield
+objective: "Administración integral de eventos"
+platforms:
+  - mobile
+  - tablet
+  - desktop
+users:
+  - organizers
+  - clients
+  - providers
+authorization:
+  model: "roles and permissions"
+  mvp_roles: "predefined"
+  future: "custom roles and permissions"
+mvp_direction: "integral basic management"
+```
 
-## Validación piloto
+### Alcance funcional preliminar
 
-Proyecto objetivo: Eventos Sociales.
+```text
+Evento
+ + Cliente
+ + Servicios
+ + Proveedores
+ + Agenda
+ + Costos básicos
+```
+
+Este alcance es una dirección inicial y todavía debe convertirse en requisitos y criterios de aceptación detallados.
+
+## Decisiones registradas durante la conversación
+
+- Se eligió organización integral de eventos en lugar de únicamente contratación o directorio.
+- Participarán organizadores, clientes y proveedores.
+- El MVP utilizará roles predefinidos.
+- La solución debe quedar preparada para roles personalizados posteriormente.
+- Se recomienda comenzar con un MVP integral pequeño y una Demo temprana.
 
 ## Decisiones pendientes
 
-- Definir contrato operativo del Project Assistant.
-- Definir primera Skill reutilizable.
-- Definir primer flujo interactivo ejecutable.
-- Definir estrategia de Demo del template.
-
-## Regla de continuidad
-
-Cada cambio relevante debe actualizar este archivo para que otro agente pueda recuperar el contexto operativo sin reconstruir toda la conversación.
+- Requisitos funcionales concretos del MVP.
+- Criterios de aceptación.
+- Arquitectura.
+- Tecnología, salvo que aparezcan restricciones.
+- Estrategia de autenticación.
+- Estrategia de Demo.
+- Nivel de autonomía para la implementación.
+- Ambientes y despliegue.
 
 ## Siguiente paso
 
-Implementar el contrato del Project Assistant como primer punto de entrada conversacional del template.
+Definir el primer conjunto mínimo de casos de uso del MVP y convertirlos en requisitos verificables.
