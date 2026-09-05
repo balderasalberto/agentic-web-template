@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Evaluate findings produced by the project's Research Radar and determine whether they are relevant, useful and sufficiently validated to justify a change to the Agentic Web Template or to a project derived from it.
+Evaluate findings produced by the project's Research Radar and determine whether they are relevant, useful and sufficiently validated to justify a change to the Agentic Application Template or to a project derived from it.
 
 The Research Agent is an evaluator and proposer. It is not an uncontrolled adopter.
 

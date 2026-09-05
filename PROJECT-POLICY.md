@@ -1,74 +1,49 @@
-# PROJECT-POLICY.md
+# Template Policy Defaults
 
-## Propósito
-
-Política configurable que determina cómo los agentes pueden interactuar, ejecutar cambios y solicitar autorización en un proyecto derivado del Agentic Web Template.
-
-## Principio
-
-La autonomía debe maximizar el trabajo seguro y verificable sin eliminar los puntos de decisión humana.
-
-## Configuración inicial
+Defaults seguros para proyectos derivados. Un proyecto puede sobrescribirlos explícitamente en su propia Policy.
 
 ```yaml
 interaction_mode: collaborator
 explanation_level: brief
-autonomy_level: L2
+autonomy_level: L1
 
 permissions:
-  code_changes: true
+  source_changes: true
   tests: true
   documentation: true
-  commit: true
-  pull_request: true
+  local_commands: true
+  commit: false
+  pull_request: false
   demo_deploy: false
   staging_deploy: false
   production_deploy: false
 
 human_gates:
-  architecture: true
+  significant_architecture_change: true
   requirements_change: true
   critical_data_change: true
   security_change: true
-  production: true
+  production_change: true
   significant_cost_change: true
   public_contract_change: true
+  permission_expansion: true
 ```
 
-## Modos de interacción
+## Semántica
 
-- `tutor`: explica y pregunta con frecuencia.
-- `collaborator`: ejecuta tareas rutinarias y consulta decisiones importantes.
-- `supervisor`: ejecuta la mayoría de tareas y consulta excepciones.
-- `autonomous`: ejecuta ciclos completos dentro de los límites definidos.
-- `custom`: política específica.
+- Una acción no declarada como permitida se considera no autorizada.
+- La autonomía nunca amplía permisos.
+- Un Human Gate prevalece sobre cualquier permiso o nivel de autonomía.
+- Cambios de Policy deben ser explícitos, trazables y no retroactivos.
+- Producción permanece bloqueada por defecto.
 
-## Niveles de autonomía
+## Gate classification guidance (v3.3)
 
-- `L0`: solo propone.
-- `L1`: implementa; Git importante es manual.
-- `L2`: puede crear commits y PRs.
-- `L3`: puede ejecutar CI y desplegar Demo/Staging.
-- `L4`: puede corregir iterativamente hasta satisfacer validaciones.
-- `L5`: automatización avanzada, siempre limitada por política y Human Gates.
-
-## Regla de preguntas
-
-Preguntar cuando:
-- exista ambigüedad relevante;
-- haya una decisión arquitectónica significativa;
-- cambien requisitos;
-- exista riesgo de seguridad;
-- una acción esté fuera de permisos;
-- se requiera un Human Gate;
-- no exista información crítica.
-
-No preguntar por acciones rutinarias ya autorizadas.
-
-## Producción
-
-Por defecto, producción requiere aprobación humana explícita.
-
-## Cambios de política
-
-Una modificación de esta política debe ser explícita y quedar registrada en el historial del proyecto.
+- Significant architecture replacement/commitment -> `significant_architecture_change`.
+- Authentication/authorization/trust-boundary changes -> `security_change` when material.
+- Destructive or critical data-model/migration changes -> `critical_data_change`.
+- Production actions -> `production_change`.
+- Significant recurring/new cost -> `significant_cost_change`.
+- Breaking public API/contract -> `public_contract_change`.
+- Expanding agent permissions -> `permission_expansion`.
+- Routine UI, documentation, tests, bug fixes and internal refactors do **not** require an architecture gate unless their actual impact crosses a gate above.

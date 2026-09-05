@@ -1,0 +1,9 @@
+project: string
+updated_at: string
+entries:
+  - id: string
+    type: overview|actor|requirement|use_case|business_rule|glossary|architecture|adr|data_model|flow|operation|security|integration|evidence
+    path: string
+    summary: string
+    related_ids: []
+    tags: []

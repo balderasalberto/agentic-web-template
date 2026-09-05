@@ -1,0 +1,12 @@
+id: TASK-XXX
+title: string
+type: FEATURE|BUGFIX|REFACTOR|UI_CHANGE|ARCHITECTURE_CHANGE|SECURITY_CHANGE|DATA_CHANGE|INFRASTRUCTURE_CHANGE|DOCUMENTATION
+status: proposed|planned|blocked|implementing|implemented|verified|done
+requirements: []
+business_rules: []
+use_cases: []
+human_gates: []
+implementation_artifacts: []
+verification: []
+evidence: []
+knowledge_impact: []

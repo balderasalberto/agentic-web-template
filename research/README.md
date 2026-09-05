@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Este directorio mantiene el mecanismo de investigación y evolución del Agentic Web Template.
+Este directorio mantiene el mecanismo de investigación y evolución del Agentic Application Template.
 
 La investigación diaria puede detectar nuevas prácticas, herramientas o patrones, pero **no modifica automáticamente el template**.
 
