@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Guide the Project Assistant through the initial discovery, configuration, planning and handoff of a web application project.
+Guide the Project Assistant through the initial discovery, configuration, planning and handoff of a software application project.
 
 This Skill is technology-agnostic and applies to greenfield and brownfield projects.
 
@@ -81,11 +81,12 @@ Then ask only if user approval is required by policy or the decision is signific
 ## Step 5 — Architecture assessment
 
 Evaluate, as applicable:
-- monolith;
-- modular monolith;
-- microservices;
-- serverless;
-- hybrid.
+- architecture candidates appropriate to the problem;
+- deployment and runtime boundaries;
+- data and integration boundaries;
+- operational complexity and reversibility.
+
+Do not constrain assessment to a predefined architecture catalog.
 
 Consider domain boundaries, scale, deployment independence, operational complexity, data consistency, observability, security, cost and team capability.
 
@@ -93,10 +94,12 @@ Default to the simplest architecture that satisfies the requirements.
 
 ## Step 6 — Configure
 
-Create or update:
-- `PROJECT-POLICY.md`;
-- `SPEC.md`;
-- `PROJECT-STATE.md`.
+Create or update the project-specific artifacts derived from templates:
+- Project Policy;
+- Project Spec;
+- Project State.
+
+Never modify the Core `SPEC.md` merely to capture application requirements.
 
 Do not invent requirements. Mark unknowns as pending.
 
@@ -121,8 +124,8 @@ Route work to specialized agents:
 | Implementation | Developer |
 | Testing | Tester |
 | Review | Reviewer |
-| Documentation | Documentation |
-| Existing-project audit/refactoring | Refactoring/Audit |
+| Documentation | Developer or dedicated extension role |
+| Existing-project audit/refactoring | appropriate audit/refactoring extension role |
 
 The Project Assistant remains responsible for coordination and state.
 

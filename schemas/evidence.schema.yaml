@@ -1,0 +1,14 @@
+id: EVIDENCE-XXX
+task_id: TASK-XXX
+requirements: []
+implementation:
+  artifacts: []
+verification:
+  commands: []
+  results: []
+  executed: false
+  status: pending|passed|failed|not_applicable
+knowledge:
+  impact_assessed: false
+  updated_paths: []
+status: pending|verified|failed

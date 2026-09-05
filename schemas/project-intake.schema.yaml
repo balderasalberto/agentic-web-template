@@ -1,0 +1,16 @@
+project:
+  mode: greenfield|brownfield|pending
+  application_type: string|pending
+business:
+  actors: []
+  goals: []
+  capabilities: []
+requirements: []
+constraints: []
+preferences: []
+assumptions: []
+unknowns: []
+environment:
+  available_tools: []
+  unavailable_tools: []
+  deployment_context: pending

@@ -1,0 +1,12 @@
+id: ADR-XXX
+title: string
+status: proposed|approved|rejected|superseded
+drivers: []
+constraints: []
+alternatives: []
+recommendation: string
+tradeoffs: []
+reversibility: low|medium|high
+human_gate:
+  required: boolean
+  status: pending|approved|rejected|not_required
